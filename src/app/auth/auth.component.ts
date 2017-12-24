@@ -49,8 +49,13 @@ export class AuthComponent implements OnInit {
   signInWithGoogle(): void {
     this.authService.signIn(GoogleLoginProvider.PROVIDER_ID);
   }
-
-
+  
+  /*
+  * Social logout
+  */
+  signOut(): void {
+    this.authService.signOut();
+  }
 
 }
 
