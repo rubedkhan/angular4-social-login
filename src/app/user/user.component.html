@@ -1,0 +1,25 @@
+<div class="main">
+<h1>Item's List</h1>
+<div class="addItem">
+	<input type="text" [(ngModel)]= "newItems" name="items" placeholder="Add Item" class="additem">
+	<button (click) = "addItems()" class="btn btn-primary">Add</button>
+</div>
+<ul>
+<li *ngFor="let i of items; let ind = index">
+	{{i}}
+ <span><a href="javascript:void(0)" (click)="removeItem(ind)">X</a></span>
+</li>
+<li *ngIf="!items.length">No Record Found.</li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
